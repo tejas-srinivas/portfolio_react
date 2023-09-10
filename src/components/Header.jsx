@@ -4,26 +4,29 @@ import asset from "../asset.png"
 //import useExternalScripts from '../useExternalScripts'
 
 function Header() {
-    const [theme, setTheme] = useState(localStorage.getItem('selected-theme'))
-    const themeButton = document.getElementById('theme-button')
-    const darkTheme = 'dark-theme'
-    const iconTheme = 'uil-sun'
+    //==================== typing EFFECT ======================
     const titles = ["Web Developer", "Logo Designer"];
     const [title, setTitle] = useState("");
 
     useEffect(() => {
         const interval = setInterval(() => {
-            if (titles[0].length > title.length) {
-                setTitle(titles[0].slice(0, title.length + 1));
-            } else {
-                setTitle("");
-            }
+            var i=0;
+                if (titles[0].length > title.length) {
+                    setTitle(titles[0].slice(0, title.length + 1));
+                } else {
+                    setTitle("");
+                }
         }, 500);
         return () => clearInterval(interval);
-    }, [title]);
+    }, [title,titles]);
 
+    //=========================== DARK MODE =================================
+    const darkTheme = 'dark-theme'
+    const iconTheme = 'uil-sun'
+    const [theme, setTheme] = useState(localStorage.getItem('selected-theme'))
     const selectedTheme = localStorage.getItem('selected-theme')
     const selectedIcon = localStorage.getItem('selected-icon')
+
     useEffect(() => {
 
         if (selectedTheme) {
@@ -31,7 +34,8 @@ function Header() {
             document.getElementById('theme-button').classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
         }
 
-    }, [theme])
+    }, [theme,selectedIcon,selectedTheme])
+
     const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
     const getCurrentIcon = () => document.getElementById('theme-button').classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
 
@@ -44,6 +48,32 @@ function Header() {
         setTheme(getCurrentTheme())
     }
 
+    //===================== NAV-MENU HIDDEN ======================
+    const navMenu = document.getElementById('nav-menu');
+    const navToggle = document.getElementById('nav-toggle');
+    const navClose = document.getElementById('nav-close');
+
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.add('show-menu')
+        })
+    }
+
+    if (navClose) {
+        navClose.addEventListener('click', () => {
+            navMenu.classList.remove('show-menu')
+        })
+    }
+
+    const navLink = document.querySelectorAll('.nav__link');
+
+    function linkaction() {
+        navMenu.classList.remove('show-menu');
+    }
+
+    navLink.forEach(n => n.addEventListener('click', linkaction))
+
+    //===========================================================
     return (
         <div className="wrapper_1">
             <header className="header" id="header">
