@@ -1,8 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import illustration from "../illustration.png"
 import asset from "../asset.png"
+//import useExternalScripts from '../useExternalScripts'
 
 function Header() {
+    const [theme,setTheme] = useState(localStorage.getItem('selected-theme'))
+    const themeButton = document.getElementById('theme-button')
+    const darkTheme = 'dark-theme'
+    const iconTheme = 'uil-sun'
+
+    const selectedTheme = localStorage.getItem('selected-theme')
+    const selectedIcon = localStorage.getItem('selected-icon')
+    useEffect(()=>{
+
+    if (selectedTheme) {
+        document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+        themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
+    }
+
+    },[theme])
+    const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+    const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
+
+    const handleClick = ()=>{
+        document.body.classList.toggle(darkTheme)
+        themeButton.classList.toggle(iconTheme)
+
+        localStorage.setItem('selected-theme', getCurrentTheme())
+        localStorage.setItem('selected-icon', getCurrentIcon())
+        setTheme(getCurrentTheme())
+    }
+
     return (
         <div className="wrapper_1">
             <header className="header" id="header">
@@ -40,7 +68,7 @@ function Header() {
                     </div>
                     {/* ================================= Theme Change ===================================== */}
                     <div className="nav__btns">
-                        <i className="uil uil-moon change-theme" id="theme-button"></i>
+                        <i className="uil uil-moon change-theme" id="theme-button" onClick={handleClick}></i>
                         <div className="nav__toggle" id="nav-toggle">
                             <i className="uil uil-bars"></i>
                         </div>
@@ -94,5 +122,4 @@ function Header() {
     )
 }
 
-export default Header
-
+export default Header;

@@ -1,5 +1,5 @@
-// ========================= Typing Effect ============================
-export function typingEffect() {
+// ========================= Typing Effect ===========================
+ function typingEffect() {
     const textArray = ["Web Developer", "Logo Designer"]
     const typingDelay = 200
     const erasingDelay = 100
@@ -46,7 +46,7 @@ export function typingEffect() {
 }
 
 // =============== Menu Hidden ===================
-export function menuHidden() {
+ function menuHidden() {
     const navMenu = document.getElementById('nav-menu');
     const navToggle = document.getElementById('nav-toggle');
     const navClose = document.getElementById('nav-close');
@@ -73,14 +73,14 @@ export function menuHidden() {
 }
 
 // ==================== skills ===================================
-export function skillsToggling() {
+ function skillsToggling() {
     const skillsContent = document.getElementsByClassName('skills__content'),
         skillsHeader = document.querySelectorAll('.skills__header')
 
     function toggleSkills() {
         let itemClass = this.parentNode.className
 
-        for (i = 0; i < skillsContent.length; i++) {
+        for (let i = 0; i < skillsContent.length; i++) {
             skillsContent[i].className = 'skills__content skills__close'
         }
 
@@ -95,7 +95,7 @@ export function skillsToggling() {
 }
 
 // ========================== DARK LIGHT ======================================
-export function lightDarkMode() {
+ function lightDarkMode() {
     const themeButton = document.getElementById('theme-button')
     const darkTheme = 'dark-theme'
     const iconTheme = 'uil-sun'
