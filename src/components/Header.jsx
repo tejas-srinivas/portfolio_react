@@ -4,7 +4,7 @@ import asset from "../asset.png"
 //import useExternalScripts from '../useExternalScripts'
 
 function Header() {
-    //==================== typing EFFECT ======================
+    //========================= typing EFFECT ===============================
     const titles = ["Web Developer", "Logo Designer"];
     const [title, setTitle] = useState("");
 
@@ -73,7 +73,7 @@ function Header() {
 
     navLink.forEach(n => n.addEventListener('click', linkaction))
 
-    //===========================================================
+    //===============================================================
     return (
         <div className="wrapper_1">
             <header className="header" id="header">

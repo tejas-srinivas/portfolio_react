@@ -1,27 +1,21 @@
-import React, { useEffect } from 'react'
-//import useExternalScripts from '../useExternalScripts'
+import React from 'react'
 function Skills() {
 
-    useEffect(()=>{
-        const skillsContent = document.getElementsByClassName('skills__content'),
-    skillsHeader = document.querySelectorAll('.skills__header')
+    const skillsContent = document.getElementsByClassName('skills__content')
 
-    function toggleSkills() {
-    let itemClass = this.parentNode.className
+    const handleClick = (e)=>{
+        let itemClass = e.target.parentElement
+        let grandParent = itemClass.parentElement.className
+        console.log(grandParent)
 
-    for (let i = 0; i < skillsContent.length; i++) {
-        skillsContent[i].className = 'skills__content skills__close'
+        for (let i = 0; i < skillsContent.length; i++) {
+            skillsContent[i].className = 'skills__content skills__close'
+        }
+
+        if (grandParent === 'skills__content skills__close') {
+            itemClass.parentElement.className = 'skills__content skills__open'
+        }
     }
-
-    if (itemClass === 'skills__content skills__close') {
-        this.parentNode.className = 'skills__content skills__open'
-    }
-}
-
-skillsHeader.forEach((el) => {
-    el.addEventListener('click', toggleSkills)
-});
-    })
 
     return (
         <main className="main">
@@ -38,7 +32,7 @@ skillsHeader.forEach((el) => {
                                 <div>
                                     <h1 className="skills__titles">Frontend Development</h1>
                                 </div>
-                                <i className="uil uil-angle-down skills__arrow"></i>
+                                <i className="uil uil-angle-down skills__arrow" onClick={handleClick}></i>
                             </div>
 
                             <div className="skills__list grid">
@@ -92,7 +86,7 @@ skillsHeader.forEach((el) => {
                                 <div>
                                     <h1 className="skills__titles">Backend Development</h1>
                                 </div>
-                                <i className="uil uil-angle-down skills__arrow"></i>
+                                <i className="uil uil-angle-down skills__arrow" onClick={handleClick}></i>
                             </div>
 
                             <div className="skills__list grid">
@@ -146,7 +140,7 @@ skillsHeader.forEach((el) => {
                                 <div>
                                     <h1 className="skills__titles">Other Skills</h1>
                                 </div>
-                                <i className="uil uil-angle-down skills__arrow"></i>
+                                <i className="uil uil-angle-down skills__arrow" onClick={handleClick}></i>
                             </div>
 
                             <div className="skills__list grid">

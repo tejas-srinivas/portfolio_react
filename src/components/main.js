@@ -1,76 +1,76 @@
 // ========================= Typing Effect ===========================
- function typingEffect() {
-    const textArray = ["Web Developer", "Logo Designer"]
-    const typingDelay = 200
-    const erasingDelay = 100
-    const newTextDelay = 2000
-    let textIndex = 0
-    let charIndex = 0
+//  function typingEffect() {
+//     const textArray = ["Web Developer", "Logo Designer"]
+//     const typingDelay = 200
+//     const erasingDelay = 100
+//     const newTextDelay = 2000
+//     let textIndex = 0
+//     let charIndex = 0
 
-    const typeTextSpan = document.getElementsByClassName("typed-text");
-    // const cursorSpan = document.querySelector(".cursor");
+//     const typeTextSpan = document.getElementsByClassName("typed-text");
+//     // const cursorSpan = document.querySelector(".cursor");
 
-    function type() {
-        if (charIndex < textArray[textIndex].length) {
-            // if(!cursorSpan.classList.contains("typing")) {cursorSpan.classList.add("typing")}
-            typeTextSpan.textContent += textArray[textIndex].charAt(charIndex)
-            charIndex++
-            console.log(typeTextSpan.textContent)
-            setTimeout(type, typingDelay)
-        }
-        else {
-            // cursorSpan.classList.remove("typing")
-            setTimeout(erase, newTextDelay)
-        }
-    }
+//     function type() {
+//         if (charIndex < textArray[textIndex].length) {
+//             // if(!cursorSpan.classList.contains("typing")) {cursorSpan.classList.add("typing")}
+//             typeTextSpan.textContent += textArray[textIndex].charAt(charIndex)
+//             charIndex++
+//             console.log(typeTextSpan.textContent)
+//             setTimeout(type, typingDelay)
+//         }
+//         else {
+//             // cursorSpan.classList.remove("typing")
+//             setTimeout(erase, newTextDelay)
+//         }
+//     }
 
-    function erase() {
-        if (charIndex > 0) {
-            // if(!cursorSpan.classList.contains("typing")) {cursorSpan.classList.add("typing")}
-            typeTextSpan.textContent = textArray[textIndex].substring(0, charIndex - 1);
-            charIndex--
-            setTimeout(erase, erasingDelay)
-        } else {
-            textIndex++
-            // cursorSpan.classList.remove("typing")
-            if (textIndex >= textArray.length) {
-                textIndex = 0
-            }
-            setTimeout(type, typingDelay)
-        }
-    }
+//     function erase() {
+//         if (charIndex > 0) {
+//             // if(!cursorSpan.classList.contains("typing")) {cursorSpan.classList.add("typing")}
+//             typeTextSpan.textContent = textArray[textIndex].substring(0, charIndex - 1);
+//             charIndex--
+//             setTimeout(erase, erasingDelay)
+//         } else {
+//             textIndex++
+//             // cursorSpan.classList.remove("typing")
+//             if (textIndex >= textArray.length) {
+//                 textIndex = 0
+//             }
+//             setTimeout(type, typingDelay)
+//         }
+//     }
 
-    document.addEventListener("DOMContentLoaded", function () {
-        setTimeout(type, typingDelay + 1100)
-    })
-}
+//     document.addEventListener("DOMContentLoaded", function () {
+//         setTimeout(type, typingDelay + 1100)
+//     })
+// }
 
 // =============== Menu Hidden ===================
- function menuHidden() {
-    const navMenu = document.getElementById('nav-menu');
-    const navToggle = document.getElementById('nav-toggle');
-    const navClose = document.getElementById('nav-close');
+//  function menuHidden() {
+//     const navMenu = document.getElementById('nav-menu');
+//     const navToggle = document.getElementById('nav-toggle');
+//     const navClose = document.getElementById('nav-close');
 
-    if (navToggle) {
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.add('show-menu')
-        })
-    }
+//     if (navToggle) {
+//         navToggle.addEventListener('click', () => {
+//             navMenu.classList.add('show-menu')
+//         })
+//     }
 
-    if (navClose) {
-        navClose.addEventListener('click', () => {
-            navMenu.classList.remove('show-menu')
-        })
-    }
+//     if (navClose) {
+//         navClose.addEventListener('click', () => {
+//             navMenu.classList.remove('show-menu')
+//         })
+//     }
 
-    const navLink = document.querySelectorAll('.nav__link');
+//     const navLink = document.querySelectorAll('.nav__link');
 
-    function linkaction() {
-        navMenu.classList.remove('show-menu');
-    }
+//     function linkaction() {
+//         navMenu.classList.remove('show-menu');
+//     }
 
-    navLink.forEach(n => n.addEventListener('click', linkaction))
-}
+//     navLink.forEach(n => n.addEventListener('click', linkaction))
+// }
 
 // ==================== skills ===================================
 function skillsToggling() {
