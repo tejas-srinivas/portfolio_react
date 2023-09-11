@@ -285,7 +285,7 @@ img {
 
 .home__content {
     grid-template-columns: .5fr 3fr;
-    padding-top: 3.5rem;
+    padding-top: 1.5rem;
     align-items: center;
 }
 
@@ -914,7 +914,7 @@ img {
         justify-self: flex-end;
     }
     .home{
-        padding: 10rem 0 10rem;
+        padding: 4rem 0 10rem;
     }
     /* .home__title{
         font-size: var(--big-font-size);
