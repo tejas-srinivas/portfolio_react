@@ -18,6 +18,18 @@ body.dark-theme {
     display: flex;
     flex-direction: row;
     align-items: center;
+    transition: .4s ease;
+}
+
+.uil-moon:hover{
+    transition: .3s ease;
+    transform: scale(1.15);
+    content: "Dark Mode";
+}
+
+.home__data .button--flex:hover {
+    transition: .3s ease;
+    transform: scale(1.15);
 }
 
 .change-theme {
@@ -298,10 +310,12 @@ img {
 .home__social-icon {
     font-size: 1.25rem;
     color: var(--first-color);
+    transition: .4s ease;
 }
 
 .home__social-icon:hover {
-    color: var(--first-color-alt)
+    color: var(--first-color-alt);
+    transform: scale(1.25)
 }
 
 .home__blob-img {
@@ -336,6 +350,14 @@ img {
 
 .home__scroll-button:hover {
     transform: translateY(.25rem);
+}
+
+.uil-message{
+    transition: .4s ease;
+}
+
+.uil-message:hover{
+    transform: translateX(1.25rem);
 }
 
 .home__scroll-mouse {
@@ -401,6 +423,10 @@ img {
     justify-content: center;
 }
 
+.about__buttons:hover .button__icon{
+    transform: scale(1.15);
+}
+
 .skills__container {
     row-gap: 0;
 }
@@ -428,7 +454,11 @@ img {
 
 .skills__arrow {
     margin-left: auto;
-    transition: .4s;
+    transition: .4s ease;
+}
+
+.skills__arrow:hover{
+    transform: scale(1.55);
 }
 
 .skills__list {
