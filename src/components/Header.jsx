@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import illustration from "../illustration.png"
 import asset from "../asset.png"
-//import useExternalScripts from '../useExternalScripts'
 
 function Header() {
     //========================= typing EFFECT ===============================
@@ -10,15 +9,14 @@ function Header() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            var i=0;
-                if (titles[0].length > title.length) {
-                    setTitle(titles[0].slice(0, title.length + 1));
-                } else {
-                    setTitle("");
-                }
+            if (titles[0].length > title.length) {
+                setTitle(titles[0].slice(0, title.length + 1));
+            } else {
+                setTitle("");
+            }
         }, 500);
         return () => clearInterval(interval);
-    }, [title,titles]);
+    }, [title, titles]);
 
     //=========================== DARK MODE =================================
     const darkTheme = 'dark-theme'
@@ -34,7 +32,7 @@ function Header() {
             document.getElementById('theme-button').classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
         }
 
-    }, [theme,selectedIcon,selectedTheme])
+    }, [theme, selectedIcon, selectedTheme])
 
     const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
     const getCurrentIcon = () => document.getElementById('theme-button').classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'

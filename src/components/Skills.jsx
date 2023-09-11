@@ -25,7 +25,7 @@ function Skills() {
 
                 <div className="skills__container container grid">
                     <div>
-                        {/* ===================================FRONTEND SKILLS============================== */}
+                        {/* ===================================FRONTEND SKILLS=============================== */}
                         <div className="skills__content skills__open">
                             <div className="skills__header">
                                 <i className="uil uil-brackets-curly skills__icon"></i>
