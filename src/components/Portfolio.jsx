@@ -19,10 +19,10 @@ function Portfolio() {
                             <img src={Modern} alt="" className="portfolio__img" />
 
                             <div className="portfolio__data">
-                                <h3 className="portfolio__title">Mordern Portfolio</h3>
+                                <h3 className="portfolio__title">Mordern Portfolio | React JS</h3>
                                 <p className="portfolio__description">Website adaptable to all devices, with ui components and animated interactions.</p>
                                 <div className="portfolio__btn__wrapper">
-                                    <a href="https://tejas-portfolio-rdzl.onrender.com/" className="button button--flex button--small portfolio__button">
+                                    <a href="https://portfolio-using-react-js.onrender.com" className="button button--flex button--small portfolio__button">
                                         Demo
                                         <i className="uil uil-arrow-right button__icon"></i>
                                     </a>
