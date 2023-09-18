@@ -3,6 +3,7 @@ import Dbms from '../project1.png'
 import Modern from '../project2.png'
 import JavaApp from '../project3.png'
 import Todo from '../project4.png'
+import Crypto from '../project5.png'
 
 function Portfolio() {
   return (
@@ -34,8 +35,28 @@ function Portfolio() {
                             </div>
                         </div>
 
+                        {/* <!-- ============================== Project 2 ===================================== --> */}
+                        <div className="portfolio__content grid swiper-slide">
+                            <img src={Crypto} alt="" className="portfolio__img" />
+
+                            <div className="portfolio__data">
+                                <h3 className="portfolio__title">Crypto Tracker | Live Statistics</h3>
+                                <p className="portfolio__description">A Live Crypto tracker website built using React Js, Chart JS, CoinGecko API.</p>
+                                <div className="portfolio__btn__wrapper">
+                                    <a href="https://live-crypto-statistics.onrender.com" className="button button--flex button--small portfolio__button">
+                                        Demo
+                                        <i className="uil uil-arrow-right button__icon"></i>
+                                    </a>
+                                    <a href="https://github.com/tejas-srinivas/crypto_tracker_using_react.js" className="button button--flex button--small portfolio__button">
+                                        GitHub
+                                        <i className="uil uil-arrow-right button__icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                          {/* <!-- ============================== Project 2 ===================================== --> */}
-                         <div className="portfolio__content grid swiper-slide">
+                        <div className="portfolio__content grid swiper-slide">
                             <img src={Todo} alt="" className="portfolio__img" />
 
                             <div className="portfolio__data">
