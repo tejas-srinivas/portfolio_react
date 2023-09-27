@@ -29,4 +29,4 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-![Screenshot of a Poerfolio Website.](https://drive.google.com/file/d/1H7mKaSTOHRC5wBCY3rl1D7Lm4RzEO649/view?usp=drive_link)
+![Screenshot of a Portfolio Website.](https://github.com/tejas-srinivas/portfolio_react.js/blob/main/src/portfolio.jpg)
