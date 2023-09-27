@@ -30,3 +30,5 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ![Screenshot of a Portfolio Website.](https://github.com/tejas-srinivas/portfolio_react.js/blob/main/src/portfolio.jpg)
+
+<img src="[/path/to/img.jpg](https://github.com/tejas-srinivas/portfolio_react.js/blob/main/src/portfolio.jpg)https://github.com/tejas-srinivas/portfolio_react.js/blob/main/src/portfolio.jpg" alt="Alt text" title="Optional title">
