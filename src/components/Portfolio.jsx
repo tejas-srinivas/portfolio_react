@@ -4,6 +4,7 @@ import Modern from '../project2.png'
 import JavaApp from '../project3.png'
 import Todo from '../project4.png'
 import Crypto from '../project5.png'
+import Dashboard from '../project6.png'
 
 function Portfolio() {
   return (
@@ -35,7 +36,23 @@ function Portfolio() {
                             </div>
                         </div>
 
-                        {/* <!-- ============================== Project 2 ===================================== --> */}
+                       {/* <!-- ============================== Project 2 ===================================== --> */}
+                        <div className="portfolio__content grid swiper-slide">
+                            <img src={Dashboard} alt="" className="portfolio__img" />
+
+                            <div className="portfolio__data">
+                                <h3 className="portfolio__title">Real Time Web Dashboard | React JS | Flask</h3>
+                                <p className="portfolio__description">Website adaptable to all devices, with ui components and animated interactions.</p>
+                                <div className="portfolio__btn__wrapper">
+                                    <a href="https://github.com/tejas-srinivas/Web-Analysis-Dashboard--React" className="button button--flex button--small portfolio__button">
+                                        GitHub
+                                        <i className="uil uil-arrow-right button__icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* <!-- ============================== Project 3 ===================================== --> */}
                         <div className="portfolio__content grid swiper-slide">
                             <img src={Crypto} alt="" className="portfolio__img" />
 
@@ -55,7 +72,7 @@ function Portfolio() {
                             </div>
                         </div>
 
-                         {/* <!-- ============================== Project 2 ===================================== --> */}
+                         {/* <!-- ============================== Project 4 ===================================== --> */}
                         <div className="portfolio__content grid swiper-slide">
                             <img src={Todo} alt="" className="portfolio__img" />
 
@@ -75,7 +92,7 @@ function Portfolio() {
                             </div>
                         </div>
 
-                        {/* <!-- ============================== Project 3 ===================================== --> */}
+                        {/* <!-- ============================== Project 5 ===================================== --> */}
                         <div className="portfolio__content grid swiper-slide">
                             <img src={Dbms} alt="" className="portfolio__img" />
 
@@ -95,7 +112,7 @@ function Portfolio() {
                             </div>
                         </div>
 
-                        {/* <!-- ============================== Project 4 =============================4======== --> */}
+                        {/* <!-- ============================== Project 6 =============================4======== --> */}
                         <div className="portfolio__content grid swiper-slide">
                             <img src={JavaApp} alt="" className="portfolio__img" />
 
