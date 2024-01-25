@@ -41,8 +41,8 @@ function Portfolio() {
                             <img src={Dashboard} alt="" className="portfolio__img" />
 
                             <div className="portfolio__data">
-                                <h3 className="portfolio__title">Real Time Web Dashboard | React JS | Flask</h3>
-                                <p className="portfolio__description">Website adaptable to all devices, with ui components and animated interactions.</p>
+                                <h3 className="portfolio__title">Web Dashboard | React JS | Flask</h3>
+                                <p className="portfolio__description">A real time web dashboard to display the stats and adopts async programming.</p>
                                 <div className="portfolio__btn__wrapper">
                                     <a href="https://github.com/tejas-srinivas/Web-Analysis-Dashboard--React" className="button button--flex button--small portfolio__button">
                                         GitHub
