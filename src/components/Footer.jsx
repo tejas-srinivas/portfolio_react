@@ -40,7 +40,7 @@ function Footer() {
             </div>
             <br />
             <br />
-            <p style={{fontSize: "13px"}}className="footer__copy">Copyright &copy; 2024 Tejas Srinivas. All rights reserved</p>
+            <p style={{fontSize: "13px", color:"#000000"}}className="footer__copy">Copyright &copy; 2024 Tejas Srinivas. All rights reserved</p>
 
         </div>
     </footer>
