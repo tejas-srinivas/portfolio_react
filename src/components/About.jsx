@@ -13,7 +13,7 @@ function About() {
                         <p className="about__description">Greetings! 👋 I'm Tejas Srinivas, a recent Information Science graduate thrilled to kickstart a new journey in the world of technology and innovation. 
                             With a solid educational foundation and a passion for problem-solving, I'm eager to contribute my skills to the field of Information Technology.</p>
                         <div className="about__buttons">
-                            <a download="" href="https://drive.google.com/file/d/1jDUKh1F9Pb9ClOQVsHjVd3i0ZY7KJE9W/view?usp=sharing" target="blank" className="button button--flex">
+                            <a download="" href="https://drive.google.com/file/d/1njWhzXtk8j0IWVAoGrdN9Kg68FpW3e7m/view?usp=drive_link" target="blank" className="button button--flex">
                                 Download CV <i className="uil uil-download-alt button__icon"></i>
                             </a>
                         </div>
